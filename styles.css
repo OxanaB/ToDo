@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    position: relative;
+    width: fit-content;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+li {
+    list-style-type: none;
+    list-style-position: outside;
+}
+label, input {
+    cursor: pointer;
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 580px;
+    max-width: 1190px;
+    margin: 40px 10px;
+}
+.main-header h1 {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    font-size: 40px;
+    line-height: 35px;
+}
+h1 span + span {
+    margin-left: 10px;
+}
+h1 span:nth-child(2) {
+    flex: 1;
+    align-self: center;
+    height: 20px;
+    border-bottom: 5px solid #000;
+}
+.logo {
+    width: 50px;
+    height: 38px;
+    margin-right: 10px;
+}
+.all-todos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 2;
+    justify-content: space-between;
+}
+.todo-section {
+    width: 580px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #808080;
+}
+.todo-section form {
+    font-size: 18px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: text;
+    color: #000;
+}
+.section-header > .active {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    flex: 1;
+}
+.active > span {
+    font-weight: 100;
+}
+.delete-icon {
+    cursor: pointer;
+}
+.todo {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px;
+}
+.todo-check-box {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 4px;
+    background-color: #fff;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    outline-color: #fff;
+}
+.todo-check-box:checked {
+    border-color: #000;
+    border-radius: 5px;
+    background-image: url(./baseline_check_box_black_24dp.png);
+    background-position: 50% 50%;
+    background-size: 140%;
+    outline-color: #fff;
+}
+.todo-check-box:checked + li {
+    text-decoration-line: line-through; 
+}
+.add-todo-button {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
